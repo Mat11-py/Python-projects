@@ -12,13 +12,13 @@ cv2.namedWindow("img") # name for window
 cv2.createTrackbar("Canny Lower","img",0,255,funtion) #canny lower bar
 cv2.createTrackbar("Canny Upper","img",0,255,funtion) #canny upper bar
 
-#swtch
+#switch
 switch = "0:OFF \n1:ON"
 cv2.createTrackbar(switch,"img",0,1,funtion) #switch bar
 
 while (1):
     k = cv2.waitKey(1) & 0xFF
-    if k == 27:
+    if k == 27: #ASCCI conversion (ESC)
         break
     #position bar
     l = cv2.getTrackbarPos("Canny Lower","img")
